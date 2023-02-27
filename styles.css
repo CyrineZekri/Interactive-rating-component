@@ -1,8 +1,140 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 17%, 29%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: black;
-    display: flexbox;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: "Overpass", sans-serif;
+    background-color: var(--veryDarkBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-    background-color: hsl(217, 12%, 63%);
+    background-color: var(--darkBlue);
+    width: 65%;
+    padding: 2.5em;
+    border-radius: 1.5em;
+    margin: 2em auto;
+}
+
+.heading {
+    margin-bottom: 0.5em;
+    color: var(--white);
+    font-size: 1.6rem;
+}
+
+.paragraph {
+    line-height: 1.7em;
+    margin-top: 0;
+    font-size: 0.9rem;
+}
+
+.paragraph,
+.numbers {
+    color: var(--lightGrey);
+}
+
+.numbers {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.7em 5px;
+    font-weight: bold;
+}
+
+.star {
+    background-color: var(--mediumGrey);
+    border-radius: 50%;
+    padding: 1em;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.circle {
+    background-color: var(--mediumGrey);
+    border-radius: 70%;
+    margin: 10px;
+    padding: 0.8em 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.circle:hover {
+    background-color: var(--lightGrey);
+    color: var(--white);
+}
+
+.circle:active {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+/*  this class is created with JS to the selected number*/
+.selected {
+    background-color: var(--lightGrey);
+    color: var(--white);
+}
+
+.evaluation button {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--white);
+    background-color: var(--orange);
+    border: none;
+    border-radius: 1.5em;
+    width: 100%;
+    padding: 1em;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.evaluation button:hover,
+.evaluation button:active {
+    background-color: var(--white);
+    color: var(--orange);
+    cursor: pointer;
+}
+
+.evaluation {
+    display: block;
+}
+
+/**THANK YOU SECTION STYLING */
+.thankyou {
+    text-align: center;
+
+}
+
+.thankyou img {
+    margin: 1em;
+}
+
+.rating {
+    background-color: var(--mediumGrey);
+    color: var(--orange);
+    border-radius: 15em;
+    padding: 0.8em;
+    margin: 1em;
+}
+
+@media all and (min-width:500px) {
+    .container {
+        padding: 1.9em;
+        width: 400px;
+    }
 }

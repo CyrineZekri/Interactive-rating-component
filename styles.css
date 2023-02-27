@@ -117,6 +117,7 @@ input[type="radio"] {
 /**THANK YOU SECTION STYLING */
 .thankyou {
     text-align: center;
+    display: none;
 
 }
 
